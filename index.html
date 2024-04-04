@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inflation Calculator</title>
+  <style>
+    .csu36CongratsWrapper {
+    background-color: var(--green100);
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    padding: 16px
+}
+
+.csu36CongratsText {
+    margin: 16px;
+    line-height: 23px
+}
+
+.csu36CongratsWrapper div:last-child {
+    flex: 3 1;
+    line-height: 23px;
+    margin-left: 16px
+}
+
+.cs81ContentDiv * {
+    text-align: left
+}
+
+.cs81ContentDiv b,.cs81ContentDiv h1,.cs81ContentDiv h2,.cs81ContentDiv h3,.cs81ContentDiv h4,.cs81ContentDiv h5,.cs81ContentDiv h6,.cs81ContentDiv strong {
+    font-weight: 500
+}
+
+.cs81ContentDiv p,.cs81ContentDiv span {
+    line-height: 26px
+}
+
+.cs81ContentDiv h1,.cs81ContentDiv h2,.cs81ContentDiv h3,.cs81ContentDiv h4,.cs81ContentDiv h5,.cs81ContentDiv h6 {
+    text-align: left;
+    line-height: 35px
+}
+
+.cs81ContentDiv a {
+    color: var(--green500)
+}
+
+.cs81ContentDiv h2,.cs81ContentDiv h3 {
+    margin-top: 15px;
+    margin-bottom: 20px
+}
+
+.cs81ContentDiv p,.cs81ContentDiv ul {
+    margin-bottom: 26px
+}
+
+.cs81ContentDiv ul {
+    padding-left: 17px
+}
+
+.cs81ContentDiv li {
+    margin-bottom: 10px
+}
+
+.cs81ContentDiv li,.cs81ContentDiv p {
+    line-height: 28px
+}
+
+.cs81ContentDiv table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    border: none;
+    width: 100%
+}
+
+.cs81ContentDiv table td,.cs81ContentDiv table th {
+    border: 1px solid var(--gray150);
+    padding: 12px 10px;
+    vertical-align: text-top;
+    text-align: left
+}
+
+.cs81ContentDiv table th {
+    font-weight: 500
+}
+
+.cs81ContentDiv table tbody tr:nth-of-type(2n) {
+    background-color: var(--gray50)
+}
+
+.cs81ContentDiv table thead {
+    background: var(--gray50)
+}
+
+.cs81ContentDiv table td p {
+    margin: 0
+}
+
+.cs81ContentDiv img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px
+}
+
+.cs81Heading {
+    font-weight: 500;
+    text-align: left;
+    line-height: 35px
+}
+
+h2.cs81Heading,h3.cs81Heading {
+    margin-top: 15px;
+    margin-bottom: 20px
+}
+
+.ss918Title {
+    padding: 10px 15px
+}
+
+.ss918Element,.ss918Title {
+    border-bottom: 1px solid var(--gray150)
+}
+
+.ss918Element {
+    padding: 8px 15px
+}
+
+.ss918Link {
+    display: block
+}
+
+.ss918Link:hover {
+    background-color: var(--green100)
+}
+
+.ss918SidebarDiv {
+    margin: 20px 0;
+    border: 1px solid var(--gray150);
+    border-radius: 5px
+}
+
+.side13ParentDiv {
+    width: 350px
+}
+
+.scc87MainDiv {
+    width: 350px;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 15px;
+    border: 1px solid var(--gray150)
+}
+
+.scc87Heading {
+    margin: 15px 0 20px
+}
+
+.scc87SubHeading {
+    margin-bottom: 20px
+}
+
+.cl347ParentContainer {
+    border: 1px solid var(--gray150);
+    border-radius: 5px;
+    height: 65vh;
+    margin: 30px 0 50px;
+    padding: 40px 30px
+}
+
+.cl347LoaderBottomMargin {
+    margin-bottom: 16px
+}
+
+.bc49MainContainer {
+    border: 1px solid var(--gray150);
+    border-radius: 8px;
+    margin-bottom: 50px
+}
+
+.bc49InputContainer {
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column
+}
+
+.bc49OutputContainer {
+    margin: 0 25px 30px;
+    border-top: 1px solid var(--gray150)
+}
+
+.bc49TotalChargesDiv {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid var(--gray150)
+}
+
+.bc49InputContainer .tabs8Line {
+    height: 100%;
+    border-radius: 20px;
+    background: var(--green100);
+    z-index: var(--zindex1)
+}
+
+.bc49InputField {
+    width: 90px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: .33px;
+    text-align: right
+}
+
+.bc49InputField,.bc49InputParent {
+    color: var(--green500);
+    height: 30px;
+    background-color: var(--green100)
+}
+
+.bc49InputParent {
+    padding: 0 3px;
+    width: 119px;
+    border-radius: 3px
+}
+
+.bc49InputContainer .tabs8TextActive {
+    color: var(--green500)
+}
+
+.bc49TabsDiv {
+    margin-bottom: 30px
+}
+
+.bc49TabsText {
+    height: 35px;
+    line-height: 35px;
+    padding: 0 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    letter-spacing: .5px;
+    border: 1px solid var(--gray150);
+    border-radius: 20px
+}
+
+.bc49TabsText.tabs8TextActive {
+    border: 1px solid var(--green100);
+    font-weight: 500
+}
+
+.bc49ExchangeToggle {
+    margin-left: 5px;
+    cursor: pointer
+}
+
+.bc49ArrowDownIcon {
+    color: var(--green500)
+}
+
+.bc49InputDiv {
+    margin-top: 20px
+}
+
+.bc49InputSection {
+    min-height: 60px
+}
+
+.bc49MainChargesDiv {
+    padding-top: 25px;
+    margin-bottom: 30px
+}
+
+.bc49ChargeDiv {
+    margin-bottom: 20px
+}
+
+.bc49DisclaimerDiv {
+    padding-top: 30px;
+    border-top: 1px solid var(--gray150)
+}
+
+.bc49ToggleArrow {
+    margin-left: 5px
+}
+
+.bc49SecChargeDiv {
+    margin: 0 0 10px 10px
+}
+
+.cp46Title {
+    margin: 0 0 50px
+}
+
+.cp46LeftSide {
+    width: calc(100% - 400px)
+}
+
+.cp46RightSide {
+    width: 350px;
+    float: right;
+    margin-top: 95px;
+    top: 30px
+}
+
+.fm77Cover1 {
+    font-size: 15px
+}
+
+.fm77Line1,.fm77Line2 {
+    padding: 0 10px;
+    line-height: 15px
+}
+
+.fm77Line2 {
+    margin-top: -7px
+}
+
+.fm77FooterHeading {
+    padding: 10px;
+    margin-bottom: 15px
+}
+
+.fm77FooterLink {
+    padding: 0 10px 10px
+}
+
+.fm77FooterLink:hover {
+    color: var(--green500)!important
+}
+
+.fm77FooterLine {
+    height: 1px;
+    opacity: .1;
+    border-bottom: 1px solid;
+    margin-top: 30px
+}
+
+.fm77FooterLine2 {
+    margin: 10px 0 20px
+}
+
+.fm77CopyRightDiv {
+    margin: 24px 0
+}
+
+.fm77GPlayDiv {
+    justify-content: flex-end
+}
+
+.fm77Disclaimer {
+    padding-top: 40px;
+    text-align: justify
+}
+
+.fm77MfStyle {
+    color: var(--green500);
+    text-transform: uppercase
+}
+
+.fm77PrivacyPolicyDiv {
+    max-width: 150px;
+    margin-left: 70px!important
+}
+
+.fm77PrivacyPolicyTxt {
+    max-width: 100px
+}
+
+.mt20 {
+    margin-top: 20px
+}
+
+.mt40 {
+    margin-top: 40px
+}
+
+.fm77BelowDisclaimer {
+    display: flex;
+    justify-content: space-evenly
+}
+
+.fm77FooterDisclaimerLink {
+    font-weight: 500;
+    margin-right: 7px
+}
+
+.fm77FooterDisclaimerLink:hover {
+    color: var(--green500)
+}
+
+.fm77Ml10 {
+    margin-left: 10px
+}
+
+.fm77AboutGrowwContainer {
+    margin: 0 auto
+}
+
+.fm77AboutGrowwBox {
+    padding-bottom: 20px
+}
+
+.fm77AboutGrowwHeader {
+    width: 100%;
+    justify-content: normal!important;
+    margin: 0;
+    padding: 0!important
+}
+
+.fm77AboutGrowwArrow {
+    margin-left: 8px
+}
+
+.fm77AboutGrowwAccordion {
+    line-height: 1.8
+}
+
+.fm77PlayStoreDiv {
+    margin-right: 30px;
+    height: 45px
+}
+
+.fm77HeartImg {
+    font-size: 32px;
+    color: var(--red500);
+    margin: 0 4px
+}
+
+.fm77Separator {
+    color: var(--white)
+}
+
+.fm77mainTicker {
+    display: block
+}
+
+.fm77tickerWrap {
+    overflow: hidden;
+    height: auto
+}
+
+.fm77tickerWrap .fm77ticker {
+    white-space: nowrap;
+    display: inline-block;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: fm77ticker;
+    animation-duration: 90s
+}
+
+.fm77tickerItem {
+    padding: 0 10px
+}
+
+.fm77tickerWrap .fm77tickerItem {
+    display: inline-block
+}
+
+.fm77tickerItemOne {
+    margin-left: 100px
+}
+
+.fm77Container {
+    margin-bottom: 20px
+}
+
+.fm77ProductsLinks {
+    padding-top: 30px
+}
+
+.fm77ContactUs {
+    line-height: 10px
+}
+
+.fm77SocialMediaLinks {
+    margin-top: 25px
+}
+
+@keyframes fm77ticker {
+    0% {
+        transform: translateZ(0);
+        visibility: visible
+    }
+
+    to {
+        transform: translate3d(-100%,0,0)
+    }
+}
+
+.fm77GrowwTxt {
+    margin-top: 17px;
+    padding-left: 15px
+}
+
+</style>
+</head>
+<body>
+  <div class="clearfix pos-rel cp46LeftSide"><h1 class="cp46Title displayBase">Inflation Calculator</h1><div class="width100 ifc72ParentDiv"><div class="ifc72CalculatorContainer"><div class="ifc72InputContainer"><div class="cis93InputDiv"><div class="valign-wrapper vspace-between"><div class="valign-wrapper">Current Cost</div><div class="cis93InputErrorContainer"><div class="c-cEUqms c-cEUqms-gvUslC-variant-default"><span><span class="cis93Prefix bodyLarge undefined"><span>₹</span></span> </span><input class="c-eSYZiJ c-eSYZiJ-hchblo-variant-default bodyXLargeHeavy" max="10000000" min="-Infinity" type="number" id="PRINCIPAL_AMOUNT" placeholder="0" value="100000" fdprocessedid="ool2nq"><span></span></div></div></div><div class="slider24Wrapper cis93SliderWrapper" style="position: relative;"><div class="cis93SliderTrack cis93SliderTrack-0" style="position: absolute; left: 0px; right: 327.723px;"></div><div class="cis93SliderTrack cis93SliderTrack-1" style="position: absolute; left: 3.27723px; right: 0px;"></div><div class="cis93SliderThumb cis93SliderThumb-0 " tabindex="0" role="slider" aria-orientation="horizontal" aria-valuenow="100000" aria-valuemin="1000" aria-valuemax="10000000" style="position: absolute; touch-action: none; z-index: 1; left: 3.27723px;"></div></div></div><div class="cis93InputDiv"><div class="valign-wrapper vspace-between"><div class="valign-wrapper">Rate of inflation (p.a)</div><div class="cis93InputErrorContainer"><div class="c-cEUqms c-cEUqms-gvUslC-variant-default"><span> </span><input class="c-eSYZiJ c-eSYZiJ-hchblo-variant-default bodyXLargeHeavy" max="50" min="-Infinity" type="number" id="RATE_OF_INFALTION" placeholder="0" value="6" fdprocessedid="k8uxkl"><span><span class="cis93Prefix bodyLarge undefined"><span>%</span></span></span></div></div></div><div class="slider24Wrapper cis93SliderWrapper" style="position: relative;"><div class="cis93SliderTrack cis93SliderTrack-0" style="position: absolute; left: 0px; right: 297.224px;"></div><div class="cis93SliderTrack cis93SliderTrack-1" style="position: absolute; left: 33.7755px; right: 0px;"></div><div class="cis93SliderThumb cis93SliderThumb-0 " tabindex="0" role="slider" aria-orientation="horizontal" aria-valuenow="6" aria-valuemin="1" aria-valuemax="50" style="position: absolute; touch-action: none; z-index: 1; left: 33.7755px;"></div></div></div><div class="cis93InputDiv"><div class="valign-wrapper vspace-between"><div class="valign-wrapper">Time period</div><div class="cis93InputErrorContainer"><div class="c-cEUqms c-cEUqms-gvUslC-variant-default"><span> </span><input class="c-eSYZiJ c-eSYZiJ-hchblo-variant-default bodyXLargeHeavy" max="30" min="-Infinity" type="number" id="TIME_PERIOD" placeholder="0" value="5" fdprocessedid="iqndrr"><span><span class="cis93Prefix bodyLarge undefined"><span>Yr</span></span></span></div></div></div><div class="slider24Wrapper cis93SliderWrapper" style="position: relative;"><div class="cis93SliderTrack cis93SliderTrack-0" style="position: absolute; left: 0px; right: 285.345px;"></div><div class="cis93SliderTrack cis93SliderTrack-1" style="position: absolute; left: 45.6552px; right: 0px;"></div><div class="cis93SliderThumb cis93SliderThumb-0 " tabindex="0" role="slider" aria-orientation="horizontal" aria-valuenow="5" aria-valuemin="1" aria-valuemax="30" style="position: absolute; touch-action: none; z-index: 1; left: 45.6552px;"></div></div></div><table class="tb10Table ifc23InfoTable"><tr class=""><td colspan="1" rowspan="1" class="contentSecondary" style="padding-left: 0px; padding-top: 10px; padding-bottom: 10px;">Current Cost</td><td colspan="1" rowspan="1" class="right-align" style="padding-right: 0px; padding-top: 10px; padding-bottom: 10px;">₹<span>1,00,000</span></td></tr><tr class=""><td colspan="1" rowspan="1" class="contentSecondary" style="padding-left: 0px; padding-top: 10px; padding-bottom: 10px;">Cost Increase</td><td colspan="1" rowspan="1" class="right-align" style="padding-right: 0px; padding-top: 10px; padding-bottom: 10px;">₹<span>33,823</span></td></tr><tr class=""><td colspan="1" rowspan="1" class="contentSecondary" style="padding-left: 0px; padding-top: 10px; padding-bottom: 10px;">Future Cost</td><td colspan="1" rowspan="1" class="right-align" style="padding-right: 0px; padding-top: 10px; padding-bottom: 10px;">₹<span>1,33,823</span></td></tr></table></div><div class="ifc54PieChartContainer"><div class="valign-wrapper vspace-between cdc54label"><div class="contentSecondary bodySmall"><span class="cdc54Chip" style="background: var(--purple100);"></span>Current Cost</div><div class="contentSecondary bodySmall"><span class="cdc54Chip" style="background: var(--purple500);"></span>Total Inflation</div></div><div class="absolute-center cdc54PieChart"><svg width="220" height="220"><g transform="translate(110,110)"><g><path d="M6.735557395310443e-15,-110A110,110,0,1,1,-109.98364789181473,1.8966276411877L-69.98959411297301,1.206944862573991A70,70,0,1,0,4.2862637970157365e-15,-70Z" fill="var(--purple100)"></path></g><g><path d="M-109.98364789181473,1.8966276411877A110,110,0,0,1,-2.0206672185931328e-14,-110L-1.2858791391047208e-14,-70A70,70,0,0,0,-69.98959411297301,1.206944862573991Z" fill="var(--purple500)"></path></g><g></g></g></svg></div></div></div></div><div class="cs81ContentDiv"><p><span style="font-weight: 400;">Inflation is an indicator of the rate of price change when compared to a specific category of goods over a particular period. Inflation signifies the elevation in the prices of goods/services that denotes a fall in purchasing capacity.</span></p>
+<h2><strong>What is Inflation?</strong></h2>
+<p><a href="https://groww.in/p/what-is-inflation"><span style="font-weight: 400;">Inflation</span></a><span style="font-weight: 400;"> is a rise in price levels of goods/services that are required for day-to-day use. It primarily indicates the fall in the purchasing capacity of the rupee.</span></p>
+<p><span style="font-weight: 400;">There are mainly 2 measures of inflation-</span></p>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Consumer Price Index (CPI)</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Wholesale Price Index (WPI)</span></li>
+</ul>
+<p><span style="font-weight: 400;">The Wholesale Price Index (WPI) calculates the wholesale-level changes in price, and <a href="https://groww.in/p/consumer-price-index">Consumer Price Index</a> (CPI) calculates the retail-level changes in price.</span></p>
+<h2><strong>How Does Inflation Affect Your Savings?</strong></h2>
+<p><span style="font-weight: 400;">Every investor makes his savings and investments with the sole intent of growing their money with time so that they can fulfil and fund their provisions and financial necessities in future.</span></p>
+<p><span style="font-weight: 400;">Though every investor plans to save effectively, certain external factors like inflation may affect savings by a considerable margin. Inflation influences the prices of goods and services, ultimately diminishing an individual's purchasing power.</span></p>
+<p><span style="font-weight: 400;">Investors usually save their finances in bank accounts to keep earning interest, but at times, such interest may not be of much use to balance out the inflation effects. Also, it is often observed that the impact of inflation principally depends on the type of investment one opts to make. The returns on such investments may vary from time to time depending on the altitude of the inflation.</span></p>
+<h2><strong>How to Prepare to Overcome Inflation?</strong></h2>
+<p><span style="font-weight: 400;">Inflation has an inevitable presence in the economy. Though the government attempts to control it via fiscal policies, certain risks and effects are beyond its control. Hence, an individual must prepare well in advance to combat inflation conditions.</span></p>
+<p><span style="font-weight: 400;">With careful investments and effective financial planning that offers inflation-beating returns, one can achieve so. For example, investing in stocks and mutual funds provide reasonable returns. It has been observed over the years that the returns from such investments have been higher than the inflation rate. However, it is important to note that the risk associated with these investments can also lead to incurring losses.</span></p>
+<p><span style="font-weight: 400;">Therefore, by diversifying the portfolio and picking the right basket of investments that provide substantial returns in the long term, one can potentially expect to endure inflation without much hardship.</span></p>
+<h2><strong>What is an Inflation Calculator?</strong></h2>
+<p><span style="font-weight: 400;">An inflation calculator calculates the effect of inflation on purchasing power and capacity of an individual. It primarily indicates the worth of a quantity of money after a certain period. The inflation adjustment calculator even helps estimate the worth of the same amount of money if it is invested.</span></p>
+<h2><strong>How is Inflation Calculated?</strong></h2>
+<p><span style="font-weight: 400;">Inflation is calculated by using Consumer Price Index. It measures the change in the price of goods and services by taking a weighted average value of each.</span></p>
+<table>
+<tbody>
+<tr>
+<td>
+<p style="text-align: center;"><span style="font-weight: 400;">CPI = (Cost of Fixed Basket of Goods and Services in Current Year/ Cost of Fixed Basket of Goods and Services in Base Year) *100</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: center;"><span style="font-weight: 400;">Note that inflation can be calculated using the formula once the CPI for the two years is calculated.</span></p>
+<h2><strong>Formula for Inflation</strong></h2>
+<p><span style="font-weight: 400;">Inflation can be measured by using Consumer Price Index (CPI)</span></p>
+<table>
+<tbody>
+<tr>
+<td>
+<p style="text-align: center;"><span style="font-weight: 400;">Inflation = ((CPI x+1 – CPIx)/ CPIx))*100</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><em><span style="font-weight: 400;">Note: CPIx is the Initial Consumer Price of the Index</span></em></p>
+<h2><strong>Benefits of Inflation Calculator</strong></h2>
+<p><span style="font-weight: 400;">The following are the chief benefits of using an inflation calculator-</span></p>
+<ul>
+<li aria-level="1">
+<h3><strong>Free to Use at Ease</strong></h3>
+</li>
+</ul>
+<p><span style="font-weight: 400;">Groww's inflation calculator is free to use and can be used to run calculations multiple numbers of times.</span></p>
+<ul>
+<li aria-level="1">
+<h3><strong>Precise Output and Results</strong></h3>
+</li>
+</ul>
+<p><span style="font-weight: 400;">This inflation calculator INR helps to assess the potential worth of money in the future. It also furnishes the worth of the same money if it is invested somewhere. Historical rates are used by the inflation calculator to calculate the precise results.</span></p>
+<ul>
+<li aria-level="1">
+<h3><strong>Simple to Use</strong></h3>
+</li>
+</ul>
+<p><span style="font-weight: 400;">The inflation calculator in India is fairly easy to operate. An individual just has to enter the money amount in order to calculate the purchasing power of the same in the forthcoming years.</span></p>
+<ul>
+<li aria-level="1">
+<h3><strong>Time-saving</strong></h3>
+</li>
+</ul>
+<p><span style="font-weight: 400;">The inflation-adjusted calculator in India requires a few seconds to deliver results. It saves time and is much more convenient than manual calculations.</span></p></div><div class="" style="margin-top: 20px;"><h2 class="componentsMainHeading contentPrimary headingLarge">FAQs</h2><div style="margin-top: 10px;"><div class="cur-po faq567QuesBorder"><div class="valign-wrapper vspace-between "><h3 class="ac11Title bodyXLarge faq567Ques bodyLarge ">What is the formula for calculating inflation?</h3><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" height="20" width="20" class="ac11Icon absolute-center  ac11collapsibleClose"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path></svg></div><div class="ac11Hidden" style="height: 0px; display: grid; grid-template-columns: 100%;"><div><div class="faq567Ans  bodyLarge "><div class="faq567HtmlContent"><p><span style="font-weight: 400;">Inflation=((CPI x+1 – CPIx)/ CPIx))*100. Where CPIx is the Initial Consumer Price of Index</span></p></div></div></div></div></div><div class="cur-po faq567QuesBorder"><div class="valign-wrapper vspace-between "><h3 class="ac11Title bodyXLarge faq567Ques bodyLarge ">What is the meaning of price inflation?</h3><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" height="20" width="20" class="ac11Icon absolute-center  ac11collapsibleClose"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path></svg></div><div class="ac11Hidden" style="height: 0px; display: grid; grid-template-columns: 100%;"><div><div class="faq567Ans  bodyLarge "><div class="faq567HtmlContent"><p><span style="font-weight: 400;">Price inflation is an increase in consumer goods and services prices.</span></p></div></div></div></div></div><div class="cur-po faq567QuesBorder"><div class="valign-wrapper vspace-between "><h3 class="ac11Title bodyXLarge faq567Ques bodyLarge ">What is Deflation?</h3><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" height="20" width="20" class="ac11Icon absolute-center  ac11collapsibleClose"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path></svg></div><div class="ac11Hidden" style="height: 0px; display: grid; grid-template-columns: 100%;"><div><div class="faq567Ans  bodyLarge "><div class="faq567HtmlContent"><p><span style="font-weight: 400;">Deflation is the opposite of inflation. In a period of deflation, the price levels of goods and services tend to drop. It is also known as negative inflation.</span></p></div></div></div></div></div><div class="cur-po faq567QuesBorder"><div class="valign-wrapper vspace-between "><h3 class="ac11Title bodyXLarge faq567Ques bodyLarge ">What are the primary causes of inflation?</h3><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" height="20" width="20" class="ac11Icon absolute-center  ac11collapsibleClose"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path></svg></div><div class="ac11Hidden" style="height: 0px; display: grid; grid-template-columns: 100%;"><div><div class="faq567Ans  bodyLarge "><div class="faq567HtmlContent"><p><span style="font-weight: 400;">Monetary policies, fiscal policies, demand-pull inflation, exchange rates, cost-push inflation, etc., can cause inflation.</span></p></div></div></div></div></div><div class="cur-po faq567QuesBorder"><div class="valign-wrapper vspace-between "><h3 class="ac11Title bodyXLarge faq567Ques bodyLarge ">What are the types of inflation?</h3><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" height="20" width="20" class="ac11Icon absolute-center  ac11collapsibleClose"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"></path></svg></div><div class="ac11Hidden" style="height: 0px; display: grid; grid-template-columns: 100%;"><div><div class="faq567Ans  bodyLarge "><div class="faq567HtmlContent"><p><span style="font-weight: 400;">The commonly known types of inflation are-</span></p>
+<ul>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Built In Inflation</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Demand-Pull Inflation</span></li>
+<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Cost-Push Inflation</span></li>
+</ul></div></div></div></div></div></div></div></div>
+<script>
+  (self.webpackChunk_N_E = self.webpackChunk_N_E || []).push([[78159], {
+    18858: function(e, n, t) {
+        "use strict";
+        t.r(n),
+        t.d(n, {
+            default: function() {
+                return f
+            }
+        });
+        var l, i = t(10860), a = t(30567), r = t(52406), o = t(33432), s = t(51607), $ = t(84719), c = t(99261), d = t(90207), u = t(54175), p = {
+            PRINCIPAL_AMOUNT: "PRINCIPAL_AMOUNT",
+            RATE_OF_INFLATION: "RATE_OF_INFALTION",
+            TIME_PERIOD: "TIME_PERIOD"
+        }, m = {
+            PRINCIPAL_AMOUNT: 1e5,
+            RATE_OF_INFLATION: 6,
+            TIME_PERIOD: 5
+        }, h = (l = {},
+        (0,
+        u.Z)(l, p.PRINCIPAL_AMOUNT, {
+            label: "Current Cost",
+            maxLength: 8,
+            max: 1e7,
+            min: 1e3,
+            step: 1e3
+        }),
+        (0,
+        u.Z)(l, p.RATE_OF_INFLATION, {
+            label: "Rate of inflation (p.a)",
+            maxLength: 2,
+            max: 50,
+            min: 1,
+            step: .1
+        }),
+        (0,
+        u.Z)(l, p.TIME_PERIOD, {
+            label: "Time period",
+            maxLength: 2,
+            max: 30,
+            min: 1,
+            step: 1
+        }),
+        l), N = function(e, n) {
+            var t, l;
+            return e >= (null == h ? void 0 : null === (t = h[n]) || void 0 === t ? void 0 : t.min) && e <= (null == h ? void 0 : null === (l = h[n]) || void 0 === l ? void 0 : l.max)
+        }, v = t(54199), I = t(61176);
+        t(2284);
+        var T = function(e, n, t) {
+            if (N(e, n))
+                null == t || t(e);
+            else {
+                var l = h[n].max
+                  , i = h[n].min;
+                e > l ? null == t || t(l) : null == t || t(i)
+            }
+        }
+          , f = function() {
+            var e = (0,
+            r.useState)(m.PRINCIPAL_AMOUNT)
+              , n = e[0]
+              , t = e[1]
+              , l = (0,
+            r.useState)(m.RATE_OF_INFLATION)
+              , u = l[0]
+              , N = l[1]
+              , f = (0,
+            r.useState)(m.TIME_PERIOD)
+              , x = f[0]
+              , g = f[1]
+              , C = Number(h[p.PRINCIPAL_AMOUNT].min)
+              , E = Number(h[p.RATE_OF_INFLATION].min)
+              , _ = Number(h[p.TIME_PERIOD].min)
+              , A = (0,
+            i.Z)((0,
+            c.HS)(Number(n), Number(u), Number(x), Number(0), C, E, _), 2)
+              , P = A[0]
+              , R = A[1]
+              , b = (0,
+            a.jsx)("span", {
+                children: d.oq.INR
+            })
+              , y = (0,
+            a.jsx)("span", {
+                children: "Yr"
+            })
+              , O = (0,
+            a.jsx)("span", {
+                children: "%"
+            });
+            return (0,
+            a.jsx)(o.Z, {
+                children: (0,
+                a.jsx)("div", {
+                    className: "width100 ifc72ParentDiv",
+                    children: (0,
+                    a.jsxs)("div", {
+                        className: "ifc72CalculatorContainer",
+                        children: [(0,
+                        a.jsxs)("div", {
+                            className: "ifc72InputContainer",
+                            children: [(0,
+                            a.jsx)(I.Z, {
+                                calculatorInput: h,
+                                inputPrefixComponent: b,
+                                inputType: p.PRINCIPAL_AMOUNT,
+                                inputValue: n,
+                                setInputValue: function(e) {
+                                    return T(e, p.PRINCIPAL_AMOUNT, t)
+                                }
+                            }), (0,
+                            a.jsx)(I.Z, {
+                                calculatorInput: h,
+                                inputSuffixComponent: O,
+                                inputType: p.RATE_OF_INFLATION,
+                                inputValue: u,
+                                setInputValue: function(e) {
+                                    return T(e, p.RATE_OF_INFLATION, N)
+                                },
+                                isDecimalRequired: !0
+                            }), (0,
+                            a.jsx)(I.Z, {
+                                calculatorInput: h,
+                                inputSuffixComponent: y,
+                                inputType: p.TIME_PERIOD,
+                                inputValue: x,
+                                setInputValue: function(e) {
+                                    return T(e, p.TIME_PERIOD, g)
+                                }
+                            }), (0,
+                            a.jsxs)($.T, {
+                                className: "ifc23InfoTable",
+                                children: [(0,
+                                a.jsxs)($.T.Row, {
+                                    vertPadding: "10px",
+                                    horzPadding: "0px",
+                                    children: [(0,
+                                    a.jsx)($.T.Cell, {
+                                        className: "contentSecondary",
+                                        children: "Current Cost"
+                                    }), (0,
+                                    a.jsxs)($.T.Cell, {
+                                        className: "right-align",
+                                        children: [d.oq.INR, (0,
+                                        a.jsx)(s.Z, {
+                                            value: n,
+                                            toFixedNumber: 0,
+                                            duration: .5
+                                        })]
+                                    })]
+                                }), (0,
+                                a.jsxs)($.T.Row, {
+                                    vertPadding: "10px",
+                                    horzPadding: "0px",
+                                    children: [(0,
+                                    a.jsx)($.T.Cell, {
+                                        className: "contentSecondary",
+                                        children: "Cost Increase"
+                                    }), (0,
+                                    a.jsxs)($.T.Cell, {
+                                        className: "right-align",
+                                        children: [d.oq.INR, (0,
+                                        a.jsx)(s.Z, {
+                                            value: P,
+                                            toFixedNumber: 0,
+                                            duration: .5
+                                        })]
+                                    })]
+                                }), (0,
+                                a.jsxs)($.T.Row, {
+                                    vertPadding: "10px",
+                                    horzPadding: "0px",
+                                    children: [(0,
+                                    a.jsx)($.T.Cell, {
+                                        className: "contentSecondary",
+                                        children: "Future Cost"
+                                    }), (0,
+                                    a.jsxs)($.T.Cell, {
+                                        className: "right-align",
+                                        children: [d.oq.INR, (0,
+                                        a.jsx)(s.Z, {
+                                            value: R,
+                                            toFixedNumber: 0,
+                                            duration: .5
+                                        })]
+                                    })]
+                                })]
+                            })]
+                        }), (0,
+                        a.jsx)("div", {
+                            className: "ifc54PieChartContainer",
+                            children: (0,
+                            a.jsx)(v.Z, {
+                                chartData: [{
+                                    value: n,
+                                    color: "var(--purple100)",
+                                    title: "Current Cost"
+                                }, {
+                                    value: P,
+                                    color: "var(--purple500)",
+                                    title: "Total Inflation"
+                                }]
+                            })
+                        })]
+                    })
+                })
+            })
+        }
+    },
+    84719: function(e, n, t) {
+        "use strict";
+        t.d(n, {
+            T: function() {
+                return x
+            }
+        });
+        var l = t(82845)
+          , i = t(14123)
+          , a = t(52406)
+          , r = t(89105)
+          , o = t.n(r)
+          , s = t(64089);
+        !function(e) {
+            var n = function() {
+                var n = this || self;
+                n.globalThis = n,
+                delete e.prototype._T_
+            };
+            "object" != typeof globalThis && (this ? n() : (e.defineProperty(e.prototype, "_T_", {
+                configurable: !0,
+                get: n
+            }),
+            _T_))
+        }(Object);
+        var $, c, d, u, p = a.memo(function(e) {
+            var n = (0,
+            s.h)(e);
+            return a.createElement("svg", (0,
+            l.Z)({
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 24 24"
+            }, n), a.createElement("path", {
+                fill: "none",
+                d: "M0 0h24v24H0z"
+            }), a.createElement("path", {
+                d: "m7 10 5 5 5-5z"
+            }))
+        }), m = a.memo(function(e) {
+            var n = (0,
+            s.h)(e);
+            return a.createElement("svg", (0,
+            l.Z)({
+                xmlns: "http://www.w3.org/2000/svg",
+                viewBox: "0 0 24 24"
+            }, n), a.createElement("path", {
+                fill: "none",
+                d: "M0 0h24v24H0z"
+            }), a.createElement("path", {
+                d: "m7 14 5-5 5 5z"
+            }))
+        }), h = (0,
+        a.forwardRef)(function(e, n) {
+            var t = e.children
+              , l = e.className
+              , i = e.onScroll
+              , r = o()(l);
+            return a.createElement("tbody", {
+                ref: n,
+                className: r,
+                onScroll: i
+            }, t)
+        }), N = function(e) {
+            var n = e.children
+              , t = e.className
+              , l = e.style
+              , r = e.width
+              , o = e.textAlign
+              , s = e.colSpan
+              , $ = e.rowSpan
+              , c = e.onClick;
+            return a.createElement("td", {
+                onClick: c,
+                colSpan: void 0 === s ? 1 : s,
+                rowSpan: void 0 === $ ? 1 : $,
+                style: (0,
+                i.b)((0,
+                i.b)({}, l), {
+                    textAlign: o
+                }),
+                className: void 0 === t ? "tb10Td" : t,
+                width: r
+            }, n)
+        }, v = function(e) {
+            var n = e.children
+              , t = e.className;
+            return a.createElement("tfoot", {
+                className: t
+            }, n)
+        }, I = function(e) {
+            var n = e.children
+              , t = e.className;
+            return a.createElement("thead", {
+                className: void 0 === t ? "" : t
+            }, n)
+        }, T = function(e) {
+            var n = e.children
+              , t = e.className
+              , l = void 0 === t ? "tb10Th tb10ThText" : t
+              , r = e.style
+              , s = e.textAlign
+              , $ = void 0 === s ? "left" : s
+              , c = e.width
+              , d = void 0 === c ? "16%" : c
+              , u = e.sortConfig
+              , h = (0,
+            i.a)(e, ["children", "className", "style", "textAlign", "width", "sortConfig"]);
+            if (u) {
+                var N = o()(l, {
+                    tb10SelectHeaderCell: null == u ? void 0 : u.isSelected
+                })
+                  , v = (null == u ? void 0 : u.iconClass) || ""
+                  , I = o()("pos-rel tb10IconClass", v, {
+                    tb10HideIcon: null == u ? void 0 : u.hideIcon,
+                    contentAccent: null == u ? void 0 : u.isSelected
+                });
+                return a.createElement("th", (0,
+                i.b)({
+                    onClick: function(e) {
+                        u && u.onSortClick && u.onSortClick(e, !(null == u ? void 0 : u.ascending))
+                    },
+                    style: (0,
+                    i.b)((0,
+                    i.b)({}, r), {
+                        textAlign: $,
+                        cursor: "pointer",
+                        width: d
+                    }),
+                    className: N
+                }, h), n, (null == u ? void 0 : u.ascending) ? a.createElement(m, {
+                    className: I
+                }) : a.createElement(p, {
+                    className: I
+                }))
+            }
+            return N = o()(l),
+            a.createElement("th", (0,
+            i.b)({
+                style: (0,
+                i.b)((0,
+                i.b)({}, r), {
+                    textAlign: $,
+                    width: d
+                }),
+                className: N
+            }, h), n)
+        }, f = ($ = a.PureComponent,
+        c = function() {
+            return null !== $ && $.apply(this, arguments) || this
+        }
+        ,
+        (0,
+        i._)(c, $),
+        c.prototype.render = function() {
+            var e = this.props
+              , n = e.children
+              , t = e.className
+              , l = e.horzPadding
+              , r = void 0 === l ? "5%" : l
+              , s = e.vertPadding
+              , $ = void 0 === s ? "16px" : s
+              , c = e.onClick
+              , d = e.id
+              , u = (0,
+            i.a)(e, ["children", "className", "horzPadding", "vertPadding", "onClick", "id"])
+              , p = o()(void 0 === t ? "" : t)
+              , m = a.Children.map(n, function(e, t) {
+                return (0,
+                a.isValidElement)(e) ? 1 === a.Children.count(n) ? (0,
+                a.cloneElement)(e, {
+                    style: (0,
+                    i.b)({
+                        paddingRight: r,
+                        paddingLeft: r,
+                        paddingTop: $,
+                        paddingBottom: $
+                    }, e.props.style)
+                }) : 0 === t ? (0,
+                a.cloneElement)(e, {
+                    style: (0,
+                    i.b)({
+                        paddingLeft: r,
+                        paddingTop: $,
+                        paddingBottom: $
+                    }, e.props.style)
+                }) : t === a.Children.count(n) - 1 ? (0,
+                a.cloneElement)(e, {
+                    style: (0,
+                    i.b)({
+                        paddingRight: r,
+                        paddingTop: $,
+                        paddingBottom: $
+                    }, e.props.style)
+                }) : (0,
+                a.cloneElement)(e, {
+                    style: (0,
+                    i.b)({
+                        paddingTop: $,
+                        paddingBottom: $
+                    }, e.props.style)
+                }) : e
+            });
+            return a.createElement("tr", (0,
+            i.b)({
+                id: d,
+                className: p,
+                onClick: c
+            }, u), m)
+        }
+        ,
+        c), x = (d = a.Component,
+        u = function() {
+            return null !== d && d.apply(this, arguments) || this
+        }
+        ,
+        (0,
+        i._)(u, d),
+        u.prototype.render = function() {
+            var e = this.props
+              , n = e.children
+              , t = e.className
+              , l = e.style
+              , i = o()("tb10Table", void 0 === t ? "" : t);
+            return a.createElement("table", {
+                style: void 0 === l ? {} : l,
+                className: i
+            }, n)
+        }
+        ,
+        u.Body = h,
+        u.Cell = N,
+        u.Footer = v,
+        u.Header = I,
+        u.HeaderCell = T,
+        u.Row = f,
+        u)
+    },
+    2284: function() {}
+}]);
+
+</script>
+</body>
+</html>
